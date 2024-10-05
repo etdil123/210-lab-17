@@ -124,12 +124,10 @@ void deleteNode(Node * &head){
         current = nullptr;
     }
     output(head);
-
-
 }
 
 void insertNode(Node * &head){
-    // insert a node
+    // insert a nodee
     Node * current = head;
     cout << "After which node to insert 10000? " << endl;
     int count = 1;
@@ -156,8 +154,6 @@ void insertNode(Node * &head){
     newnode->next = current;
     prev->next = newnode;
     output(head);
-
-
 }
 
 void deleteList(Node * &head){
