@@ -33,6 +33,8 @@ int main() {
     
     insertNode(head);
 
+    addNodeEnd(head);
+
     deleteList(head);
     
 
@@ -76,9 +78,22 @@ void addNodeEnd(Node * &head){
     cin >> entry;
 
     Node * prev = head;
-    for (int i = 0; i < SIZE; i++){
-        
+    // Traverse to end of linked list
+    for (int i = 0; i < (SIZE); i++){
+        if (i == 0)
+            current = current->next;
+        else {
+            current = current->next;
+            prev = prev->next;
+        }
     }
+
+    // At the end, insert a new node
+    Node * newnode = new Node;
+    newnode->value = entry;
+    newnode->next = nullptr;
+    prev->next = newnode;
+    output(head);
     
 }
 
