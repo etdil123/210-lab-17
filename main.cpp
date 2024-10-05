@@ -11,9 +11,10 @@ struct Node {
 
 void output(Node *);
 void addNodeFront(Node * &head, Node * newVal, int tmp_val);
-void deleteNode(Node * head);
-void insertNode(Node * head);
-void deleteList(Node * head);
+void addNodeEnd(Node * &head);
+void deleteNode(Node * &head);
+void insertNode(Node * &head);
+void deleteList(Node * &head);
 
 int main() {
     Node *head = nullptr;
@@ -52,7 +53,6 @@ void output(Node * hd) {
     cout << endl;
 }
 
-
 void addNodeFront(Node * &head, Node * newVal, int tmp_val){
      // adds node at head
     if (!head) { // if this is the first node, it's the new head
@@ -67,7 +67,22 @@ void addNodeFront(Node * &head, Node * newVal, int tmp_val){
     }
 }
 
-void deleteNode(Node * head){
+void addNodeEnd(Node * &head){
+    // insert node at the end
+    Node * current = head;
+
+    int entry;
+    cout << "Enter value to insert at the end: " << endl;
+    cin >> entry;
+
+    Node * prev = head;
+    for (int i = 0; i < SIZE; i++){
+        
+    }
+    
+}
+
+void deleteNode(Node * &head){
 
     // deleting a node
     Node * current = head;
@@ -98,7 +113,7 @@ void deleteNode(Node * head){
 
 }
 
-void insertNode(Node * head){
+void insertNode(Node * &head){
     // insert a node
     Node * current = head;
     cout << "After which node to insert 10000? " << endl;
@@ -130,7 +145,7 @@ void insertNode(Node * head){
 
 }
 
-void deleteList(Node * head){
+void deleteList(Node * &head){
     // deleting the linked list
     Node * current = head;
     while (current) {
