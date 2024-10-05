@@ -10,6 +10,7 @@ struct Node {
 };
 
 void output(Node *);
+void add_node_front(Node * head, Node * newVal);
 
 int main() {
     Node *head = nullptr;
@@ -112,4 +113,12 @@ void output(Node * hd) {
         current = current->next;
     }
     cout << endl;
+}
+
+
+void add_node_front(Node * head, Node * newVal){
+
+    
+
+
 }
